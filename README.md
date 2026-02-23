@@ -17,13 +17,13 @@ Simulação de scan de portas utilizando o Kali Linux para identificar serviços
 
 Bash
 sudo nmap -sS -Pn -T4 [IP_DO_WINDOWS]
-
+Evidência do Ataque (Kali Linux):
 3. Análise e Detecção (SOC)
 A detecção foi realizada através do Event ID 5157 (Windows Filtering Platform), que registra conexões bloqueadas pelo firewall nativo.
 
-Evidência da Detecção:
+Evidência da Detecção (Windows Event Viewer):
 🔎 Achados da Investigação (Análise do Log)
-Ao analisar o evento de segurança capturado, os seguintes dados técnicos foram correlacionados:
+Ao analisar o evento de segurança capturado, os seguintes dados técnicos foram correlacionados conforme as marcações no print:
 
 Data/Hora: 23/02/2026 17:53:18.
 
@@ -36,4 +36,4 @@ Protocolo: UDP (17).
 Resultado: Bloqueio efetuado com sucesso pelo firewall (ID 5157).
 
 🧠 Conclusão
-Este laboratório demonstra a importância da visibilidade de rede. Sem a configuração correta das políticas de auditoria avançada, atividades de reconhecimento (recon) passariam despercebidas pelos logs padrão, dificultando a resposta a incidentes.
+Este laboratório demonstra a importância da visibilidade de rede. Sem a configuração correta das políticas de auditoria avançada, atividades de reconhecimento passariam despercebidas pelos logs padrão, dificultando a resposta a incidentes.
